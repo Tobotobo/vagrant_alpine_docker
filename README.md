@@ -1,15 +1,29 @@
-# vagrant_docker_provisioning
+# vagrant_alpine_docker
+
+## 概要
+
+* Vagrant を使いコマンド一発で Docker を使えるようにする。
+* Docker のホストには軽量な Alpine を用いる。
+
+## 用語
+
+### Vagrant とは
+Vagrant (ベイグラント) は、仮想マシンの設定、プロビジョニング(※)、管理を簡素化するためのツールである。  
+コマンド一つで開発環境を構築し、簡単に再現や共有が可能となる。  
+主に開発者がプロジェクトごとに異なる開発環境を簡単に設定し、チーム間での環境の統一を図ることができる。
+
+※プロビジョニング  
+ソフトウェアやシステムの設定を自動的に準備し、運用可能な状態にすること。  
+具体的には、必要なソフトウェアのインストール、設定ファイルの配置、ネットワークの設定など、システムを動作させるために必要な作業を自動で行うことを指す。  
+これにより、手作業でのミスを減らし、効率的にシステムを構築・管理できる。
 
 
-[Vagrant - Docker Provisioner](https://developer.hashicorp.com/vagrant/docs/provisioning/docker)
-[DockerイメージからGitLab環境を構築(GitLab&Runner)](https://qiita.com/Nats72/items/ca80b0bfede4d8e10158)
 
-```ruby
-Vagrant.configure("2") do |config|
-  config.vm.box = "hashicorp/bionic64"
-  config.vm.box_version = "1.0.282"
-  config.vm.provision "docker" do |d|
-    # 
-  end
-end
-```
+### Alpine とは
+
+Alpine Linux (アルパイン リナックス) は、セキュリティ、シンプルさ、リソース効率の高さを重視した軽量な Linux ディストリビューション(※)である。
+
+※ディストリビューション  
+TODO
+
+
